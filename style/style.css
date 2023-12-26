@@ -125,6 +125,7 @@ header nav a {
     font-family: MontserratRegular, serif;
     font-size: clamp(0.75rem, 0.5rem + 1.33vw, 1.5rem);
     margin: 0 1rem;
+    border-bottom: 1px solid transparent;
 }
 
 header nav a:hover {
@@ -332,6 +333,7 @@ header nav a:hover {
 }
 
 .swiper {
+    position: relative;
     display: flex;
     width: 100%;
     height: clamp(12.5rem, 5.208rem + 38.89vw, 34.375rem);
@@ -342,6 +344,43 @@ header nav a:hover {
 
 .swiper-wrapper {
     display: flex;
+}
+
+.swiper-pagination {
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -90%);
+    display: flex;
+    align-items: center;
+}
+
+.swiper-pagination-bullet {
+    width: clamp(1rem, 0.917rem + 0.44vw, 1.25rem);
+    height: clamp(1rem, 0.917rem + 0.44vw, 1.25rem);
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.6);
+    margin: 0 0.75vh;
+    cursor: pointer;
+}
+
+.swiper-pagination-bullet-active {
+    position: relative;
+    width: clamp(1.5rem, 1.375rem + 0.67vw, 1.875rem);
+    height: clamp(1.5rem, 1.375rem + 0.67vw, 1.875rem);
+}
+
+.swiper-pagination-bullet-active:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: "";
+    width: 70%;
+    height: 70%;
+    border-radius: 50%;
+    background: white;
 }
 
 .swiper-slide:nth-child(1) {

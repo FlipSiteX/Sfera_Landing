@@ -16,6 +16,11 @@ const swiper = new Swiper('.swiper', {
     direction: 'horizontal',
     grabCursor: true,
     loopAddBlankSlides: true,
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true,
+    },
     autoplay: {
         delay: "5000"
     }
